@@ -47,6 +47,14 @@ The Essential Eight are baseline mitigation strategies recommended by the Austra
 2. [Progress to ML2 Checklist](checklists/ML2-CHECKLIST.md)
 3. [Achieve ML3 Checklist](checklists/ML3-CHECKLIST.md)
 
+### 🆕 Infrastructure Hosting Checklists
+Platform-specific security implementation guides:
+- [🏢 On-Premise Hosting Security](checklists/hosting/on-premise-hosting-checklist.md)
+- [☁️ AWS Cloud Hosting Security](checklists/hosting/aws-hosting-checklist.md)
+- [☁️ Azure Cloud Hosting Security](checklists/hosting/azure-hosting-checklist.md)
+- [☁️ Google Cloud Platform Security](checklists/hosting/gcp-hosting-checklist.md)
+- [📚 Hosting Security Overview](checklists/hosting/README.md)
+
 ### Assessment Templates
 - [Self-Assessment Template](templates/self-assessment.xlsx)
 - [Gap Analysis Template](templates/gap-analysis.xlsx)
