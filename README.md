@@ -5,6 +5,8 @@ A comprehensive implementation checklist and toolkit for the Australian Cyber Se
 [![Essential Eight](https://img.shields.io/badge/Essential%20Eight-ACSC-blue)](https://www.cyber.gov.au/essential-eight)
 [![Maturity Levels](https://img.shields.io/badge/Maturity%20Levels-1--3-green)](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/tysoncung/essential-eight-checklist/graphs/commit-activity)
 
 ## 📋 Quick Navigation
 
@@ -13,6 +15,13 @@ A comprehensive implementation checklist and toolkit for the Australian Cyber Se
 - [Implementation Checklists](#implementation-checklists)
 - [Tools & Resources](#tools--resources)
 - [Assessment Guide](#assessment-guide)
+
+## 🔥 Recent Updates
+
+- **Sept 2025**: Enhanced documentation with platform-specific guides
+- **Sept 2025**: Added cloud hosting security checklists (AWS, Azure, GCP)
+- **Sept 2025**: Improved badge system and maintenance tracking
+- **Sept 2025**: Active community contributions welcomed
 
 ## Overview
 
