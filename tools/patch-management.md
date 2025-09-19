@@ -3,11 +3,13 @@
 ## Enterprise Solutions
 
 ### Microsoft SCCM/MECM
+
 **Cost**: $$$ (included with Enterprise Agreement)
 **Complexity**: High
 **Best for**: Large Windows environments
 
 #### Key Features
+
 - Comprehensive patch management
 - Third-party patching support
 - Detailed reporting
@@ -15,6 +17,7 @@
 - Automatic deployment rules
 
 #### Implementation
+
 ```powershell
 # Create automatic deployment rule for critical updates
 $DeploymentRule = @{
@@ -30,11 +33,13 @@ New-CMSoftwareUpdateAutoDeploymentRule @DeploymentRule
 ---
 
 ### Microsoft Intune
+
 **Cost**: $$ (per user/month)
 **Complexity**: Medium
 **Best for**: Cloud-managed devices
 
 #### Configuration
+
 ```powershell
 # Configure Windows Update for Business rings
 $UpdateRing = @{
@@ -49,11 +54,13 @@ New-IntuneDeviceConfigurationPolicy @UpdateRing
 ---
 
 ### WSUS (Windows Server Update Services)
+
 **Cost**: Free (Windows Server role)
 **Complexity**: Medium
 **Best for**: ML1-ML2 Windows environments
 
 #### Setup Script
+
 ```powershell
 # Install WSUS role
 Install-WindowsFeature -Name UpdateServices -IncludeManagementTools
@@ -77,11 +84,13 @@ $rule.Save()
 ## Open Source Solutions
 
 ### Ansible
+
 **Cost**: Free (Red Hat Ansible = $$)
 **Complexity**: Medium
 **Best for**: Linux/Unix environments
 
 #### Playbook Example
+
 ```yaml
 ---
 - name: Patch Management Playbook
@@ -121,11 +130,13 @@ $rule.Save()
 ---
 
 ### Puppet
+
 **Cost**: Free (Enterprise = $$$)
 **Complexity**: High
 **Best for**: Large-scale automation
 
 #### Manifest Example
+
 ```puppet
 class patch_management {
   # Schedule updates
@@ -154,11 +165,13 @@ class patch_management {
 ## Cloud-Native Solutions
 
 ### AWS Systems Manager Patch Manager
+
 **Cost**: $ (per instance)
 **Complexity**: Medium
 **Best for**: AWS environments
 
 #### Implementation
+
 ```python
 import boto3
 
@@ -194,11 +207,13 @@ window = ssm.create_maintenance_window(
 ---
 
 ### Azure Update Management
+
 **Cost**: $ (per node)
 **Complexity**: Low
 **Best for**: Azure/Hybrid environments
 
 #### ARM Template
+
 ```json
 {
   "type": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurations",
@@ -230,11 +245,13 @@ window = ssm.create_maintenance_window(
 ## Third-Party Patch Management
 
 ### Patch My PC
+
 **Cost**: $$ (per device)
 **Complexity**: Low
 **Best for**: Third-party Windows applications
 
 **Supported Applications**:
+
 - Adobe products
 - Chrome, Firefox
 - Java, .NET
@@ -243,11 +260,13 @@ window = ssm.create_maintenance_window(
 ---
 
 ### Ivanti Patch
+
 **Cost**: $$$ (per device)
 **Complexity**: Medium
 **Best for**: Enterprise environments
 
 **Features**:
+
 - Cross-platform support
 - Virtual patching
 - Automated testing
@@ -258,6 +277,7 @@ window = ssm.create_maintenance_window(
 ## Vulnerability Scanning Integration
 
 ### Nessus + Patch Management
+
 ```python
 import requests
 from datetime import datetime, timedelta
@@ -294,6 +314,7 @@ class VulnerabilityPatcher:
 ## Patch Testing Strategies
 
 ### Ring Deployment Model
+
 ```mermaid
 graph LR
     A[Canary: 1%] --> B[Pilot: 10%]
@@ -302,6 +323,7 @@ graph LR
 ```
 
 ### Automated Testing Framework
+
 ```bash
 #!/bin/bash
 # Patch validation script
@@ -333,6 +355,7 @@ fi
 ## Reporting & Compliance
 
 ### PowerShell Compliance Report
+
 ```powershell
 # Generate patch compliance report
 $computers = Get-ADComputer -Filter * | Select -ExpandProperty Name
@@ -359,18 +382,21 @@ $report | Export-Csv "PatchCompliance.csv" -NoTypeInformation
 ## Best Practices by Maturity Level
 
 ### ML1 (1 month patching)
+
 1. Manual approval process
 2. Monthly maintenance windows
 3. Basic reporting
 4. Test on non-critical systems
 
 ### ML2 (2 weeks patching)
+
 1. Automated approval for critical patches
 2. Ring deployment model
 3. Automated testing
 4. Integration with vulnerability scanning
 
 ### ML3 (48 hours patching)
+
 1. Fully automated pipeline
 2. Continuous deployment
 3. Virtual patching for gaps
@@ -381,6 +407,7 @@ $report | Export-Csv "PatchCompliance.csv" -NoTypeInformation
 ## Emergency Patching Procedures
 
 ### Zero-Day Response Playbook
+
 1. **Assess** - Determine affected systems
 2. **Mitigate** - Apply virtual patches/WAF rules
 3. **Test** - Validate patch in isolated environment
@@ -390,6 +417,7 @@ $report | Export-Csv "PatchCompliance.csv" -NoTypeInformation
 ---
 
 ## Resources
+
 - [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide/)
 - [NIST Patch Management](https://nvd.nist.gov/)
 - [ACSC Patch Management Guidance](https://www.cyber.gov.au/patching)

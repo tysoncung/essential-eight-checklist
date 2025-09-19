@@ -7,7 +7,9 @@ This directory contains comprehensive security checklists for implementing the E
 ## Available Checklists
 
 ### 🏢 [On-Premise Hosting](./on-premise-hosting-checklist.md)
+
 Complete security checklist for organizations managing their own physical infrastructure, including:
+
 - Physical security controls
 - Network infrastructure
 - Server room/data center requirements
@@ -15,7 +17,9 @@ Complete security checklist for organizations managing their own physical infras
 - Hardware lifecycle management
 
 ### ☁️ [AWS Cloud Hosting](./aws-hosting-checklist.md)
+
 Comprehensive guide for securing Amazon Web Services infrastructure:
+
 - AWS-specific service configurations
 - IAM and access management
 - VPC and network security
@@ -23,7 +27,9 @@ Comprehensive guide for securing Amazon Web Services infrastructure:
 - Cost optimization with security
 
 ### ☁️ [Azure Cloud Hosting](./azure-hosting-checklist.md)
+
 Detailed checklist for Microsoft Azure deployments:
+
 - Azure AD and identity management
 - Microsoft Defender for Cloud
 - Network security with NSGs and Azure Firewall
@@ -31,7 +37,9 @@ Detailed checklist for Microsoft Azure deployments:
 - Integration with Microsoft 365 security
 
 ### ☁️ [Google Cloud Platform](./gcp-hosting-checklist.md)
+
 Security implementation guide for GCP:
+
 - Cloud Identity and IAM
 - VPC Service Controls
 - Security Command Center
@@ -41,24 +49,31 @@ Security implementation guide for GCP:
 ## How to Use These Checklists
 
 ### 1. Select Your Platform
+
 Choose the checklist that matches your hosting environment. If you use multiple platforms, review each relevant checklist.
 
 ### 2. Assess Current State
+
 Go through each item and mark your current compliance level:
+
 - ✅ Implemented
 - 🔄 In Progress
 - ❌ Not Started
 - N/A Not Applicable
 
 ### 3. Prioritize Implementation
+
 Each checklist includes implementation phases:
+
 - **Phase 1**: Critical security controls (Immediate)
 - **Phase 2**: High priority items (30 days)
 - **Phase 3**: Medium priority items (90 days)
 - **Phase 4**: Ongoing improvements
 
 ### 4. Map to Maturity Levels
+
 All checklists are organized by Essential Eight Maturity Levels:
+
 - **ML1**: Basic cyber hygiene
 - **ML2**: Enhanced security posture
 - **ML3**: Advanced protection against sophisticated threats
@@ -79,6 +94,7 @@ All checklists are organized by Essential Eight Maturity Levels:
 ## Common Security Controls Across All Platforms
 
 ### Essential Eight Controls
+
 1. **Application Control** - Whitelisting and execution control
 2. **Patch Applications** - Regular security updates
 3. **Configure Office Macros** - Restrict macro execution
@@ -89,6 +105,7 @@ All checklists are organized by Essential Eight Maturity Levels:
 8. **Regular Backups** - Data protection and recovery
 
 ### Additional Security Layers
+
 - Network segmentation
 - Encryption at rest and in transit
 - Security monitoring and SIEM
@@ -119,6 +136,7 @@ If you're using multiple platforms:
 ## Automation and Infrastructure as Code
 
 Each checklist includes automation examples:
+
 - **On-Premise**: PowerShell, Ansible, Puppet
 - **AWS**: CloudFormation, Terraform, AWS CLI
 - **Azure**: ARM Templates, Terraform, Azure CLI
@@ -127,6 +145,7 @@ Each checklist includes automation examples:
 ## Compliance and Regulatory Alignment
 
 All checklists align with:
+
 - Australian Government Information Security Manual (ISM)
 - NIST Cybersecurity Framework
 - CIS Controls
@@ -136,6 +155,7 @@ All checklists align with:
 ## Regular Review and Updates
 
 Security is an ongoing process:
+
 1. Review checklists quarterly
 2. Update based on new threats
 3. Incorporate platform updates
@@ -145,6 +165,7 @@ Security is an ongoing process:
 ## Contributing
 
 We welcome contributions to improve these checklists:
+
 - Report issues or gaps
 - Submit pull requests with improvements
 - Share implementation experiences
@@ -153,16 +174,19 @@ We welcome contributions to improve these checklists:
 ## Resources
 
 ### General Security
+
 - [ACSC Essential Eight](https://www.cyber.gov.au/acsc/view-all-content/essential-eight)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [CIS Controls](https://www.cisecurity.org/controls)
 
 ### Platform-Specific
+
 - [AWS Security Best Practices](https://aws.amazon.com/security/best-practices/)
 - [Azure Security Documentation](https://docs.microsoft.com/azure/security/)
 - [Google Cloud Security](https://cloud.google.com/security)
 
 ### Tools and Automation
+
 - [Terraform](https://www.terraform.io/)
 - [Ansible](https://www.ansible.com/)
 - [Cloud Security Alliance](https://cloudsecurityalliance.org/)
@@ -170,6 +194,7 @@ We welcome contributions to improve these checklists:
 ## Support
 
 For questions or assistance:
+
 - Open an issue in the repository
 - Consult platform-specific support channels
 - Engage with the security community

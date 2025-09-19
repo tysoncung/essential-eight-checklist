@@ -1,6 +1,7 @@
 # 📋 Essential Eight - Maturity Level 3 Checklist
 
 ## Objective
+
 Significantly harder for adversaries to compromise systems, suitable for organizations that are likely targets of sophisticated adversaries.
 
 ---
@@ -8,6 +9,7 @@ Significantly harder for adversaries to compromise systems, suitable for organiz
 ## 1. Application Control
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Application control restricts all drivers and firmware to approved versions
 - [ ] Application control validates all scripts and installers
 - [ ] Centralized application control management with real-time updates
@@ -15,6 +17,7 @@ Significantly harder for adversaries to compromise systems, suitable for organiz
 - [ ] All execution attempts (allowed and blocked) are logged and analyzed
 
 ### Enterprise Implementation
+
 ```powershell
 # Implement Windows Defender Application Control with managed installer
 $PolicyPath = ".\ML3-WDAC-Policy.xml"
@@ -28,12 +31,14 @@ Set-HVCIOptions -Enabled -Policy $PolicyPath
 ```
 
 ### Zero Trust Application Control
+
 - [ ] Implement runtime application self-protection (RASP)
 - [ ] Deploy endpoint detection and response (EDR)
 - [ ] Configure exploit protection settings
 - [ ] Enable attack surface reduction rules
 
 ### Verification
+
 - [ ] Continuous compliance monitoring dashboard
 - [ ] Real-time alerting on policy violations
 - [ ] Machine learning-based anomaly detection
@@ -44,6 +49,7 @@ Set-HVCIOptions -Enabled -Policy $PolicyPath
 ## 2. Patch Applications
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Security vulnerabilities in internet-facing services are patched within 48 hours or mitigated
 - [ ] Security vulnerabilities in all applications are patched within 48 hours of release
 - [ ] Automated vulnerability scanning runs continuously
@@ -51,6 +57,7 @@ Set-HVCIOptions -Enabled -Policy $PolicyPath
 - [ ] Zero-day mitigation strategies are in place
 
 ### Continuous Patch Management
+
 ```python
 # Automated patch orchestration script
 import requests
@@ -79,12 +86,14 @@ class PatchOrchestrator:
 ```
 
 ### Advanced Mitigation
+
 - [ ] Web application firewall (WAF) with virtual patching
 - [ ] Runtime application security protection
 - [ ] Micro-segmentation for lateral movement prevention
 - [ ] Deception technology for zero-day detection
 
 ### Verification
+
 - [ ] Real-time patch compliance dashboard
 - [ ] Automated penetration testing post-patching
 - [ ] Vulnerability correlation with threat intelligence
@@ -95,6 +104,7 @@ class PatchOrchestrator:
 ## 3. Configure Microsoft Office Macro Settings
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Only macros digitally signed by trusted publishers can execute
 - [ ] Macros are subject to application control policies
 - [ ] All macro execution is logged with full audit trail
@@ -102,6 +112,7 @@ class PatchOrchestrator:
 - [ ] Sandboxing for suspicious macros
 
 ### Advanced Macro Protection
+
 ```powershell
 # Configure advanced macro protection with AMSI
 $AMSISettings = @{
@@ -118,12 +129,14 @@ New-IntuneDeviceConfigurationPolicy -Windows10GeneralConfiguration -OmaSettings 
 ```
 
 ### Macro Analysis Pipeline
+
 - [ ] Static analysis of macro code
 - [ ] Dynamic analysis in sandbox
 - [ ] Machine learning-based detection
 - [ ] Integration with threat intelligence
 
 ### Verification
+
 - [ ] Zero unauthorized macro executions
 - [ ] Complete audit trail of all macro activity
 - [ ] Regular red team exercises testing macro controls
@@ -134,6 +147,7 @@ New-IntuneDeviceConfigurationPolicy -Windows10GeneralConfiguration -OmaSettings 
 ## 4. User Application Hardening
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] All unnecessary features in applications are disabled
 - [ ] Application sandboxing is implemented
 - [ ] Just-in-time application access is configured
@@ -141,6 +155,7 @@ New-IntuneDeviceConfigurationPolicy -Windows10GeneralConfiguration -OmaSettings 
 - [ ] Container-based application delivery
 
 ### Advanced Hardening Configuration
+
 ```yaml
 # Kubernetes pod security policy for application containers
 apiVersion: policy/v1beta1
@@ -167,12 +182,14 @@ spec:
 ```
 
 ### Application Isolation
+
 - [ ] Remote browser isolation for internet access
 - [ ] Application virtualization for legacy apps
 - [ ] Secure coding practices enforced
 - [ ] Content disarm and reconstruction (CDR)
 
 ### Verification
+
 - [ ] Application attack surface analysis
 - [ ] Continuous security testing
 - [ ] User behavior analytics
@@ -183,6 +200,7 @@ spec:
 ## 5. Restrict Administrative Privileges
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Zero standing administrative privileges
 - [ ] All administrative actions require approval and are time-bound
 - [ ] Privileged access from dedicated secure admin workstations only
@@ -190,6 +208,7 @@ spec:
 - [ ] Biometric authentication for privileged access
 
 ### Zero Standing Privilege Architecture
+
 ```python
 # Privileged access broker implementation
 class PrivilegedAccessBroker:
@@ -220,12 +239,14 @@ class PrivilegedAccessBroker:
 ```
 
 ### Privileged Access Workstations (PAWs)
+
 - [ ] Dedicated hardware for administrative tasks
 - [ ] No internet access or email on PAWs
 - [ ] Hardware-based attestation
 - [ ] Shielded VMs for cloud administration
 
 ### Verification
+
 - [ ] Zero persistent admin accounts
 - [ ] Complete audit trail of all privileged actions
 - [ ] Regular privilege access reviews
@@ -236,6 +257,7 @@ class PrivilegedAccessBroker:
 ## 6. Patch Operating Systems
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Security vulnerabilities are patched within 48 hours of release
 - [ ] Automated patch deployment with zero downtime
 - [ ] Kernel live patching for critical systems
@@ -243,6 +265,7 @@ class PrivilegedAccessBroker:
 - [ ] Security configuration compliance continuously enforced
 
 ### Infrastructure as Code Patching
+
 ```terraform
 # Automated OS deployment with latest patches
 resource "aws_launch_template" "secure_instance" {
@@ -272,6 +295,7 @@ resource "aws_launch_template" "secure_instance" {
 ```
 
 ### Verification
+
 - [ ] Real-time OS compliance monitoring
 - [ ] Automated configuration drift remediation
 - [ ] Continuous vulnerability assessment
@@ -282,6 +306,7 @@ resource "aws_launch_template" "secure_instance" {
 ## 7. Multi-factor Authentication
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Phishing-resistant MFA for all users and all access
 - [ ] Risk-based authentication with continuous verification
 - [ ] Passwordless authentication implementation
@@ -289,6 +314,7 @@ resource "aws_launch_template" "secure_instance" {
 - [ ] Biometric authentication where appropriate
 
 ### Passwordless Implementation
+
 ```javascript
 // WebAuthn implementation for passwordless
 async function authenticateUser() {
@@ -321,12 +347,14 @@ async function authenticateUser() {
 ```
 
 ### Continuous Authentication
+
 - [ ] Behavioral biometrics monitoring
 - [ ] Device trust verification
 - [ ] Location and network analysis
 - [ ] Session risk scoring
 
 ### Verification
+
 - [ ] 100% MFA coverage
 - [ ] Zero password-based authentication
 - [ ] Authentication event correlation
@@ -337,6 +365,7 @@ async function authenticateUser() {
 ## 8. Regular Backups
 
 ### ML3 Requirements (in addition to ML2)
+
 - [ ] Continuous data protection with near-zero RPO
 - [ ] Automated backup integrity verification
 - [ ] Geographically distributed immutable backups
@@ -344,6 +373,7 @@ async function authenticateUser() {
 - [ ] Ransomware-proof backup architecture
 
 ### Advanced Backup Architecture
+
 ```yaml
 # Kubernetes backup strategy with Velero
 apiVersion: velero.io/v1
@@ -384,12 +414,14 @@ spec:
 ```
 
 ### Disaster Recovery Orchestration
+
 - [ ] Automated failover procedures
 - [ ] Cross-region replication
 - [ ] Backup encryption with key rotation
 - [ ] Air-gapped backup validation lab
 
 ### Verification
+
 - [ ] Weekly automated DR drills
 - [ ] Backup immutability testing
 - [ ] Recovery point objective (RPO) < 15 minutes
@@ -412,6 +444,7 @@ spec:
 | Regular Backups | ✅ | ⬜ | ⬜ | ⬜ | ⬜ |
 
 ## Key Differences from ML2
+
 - **48-hour patching** for all vulnerabilities
 - **Zero standing privileges** architecture
 - **Passwordless authentication** implementation
@@ -420,6 +453,7 @@ spec:
 - **Advanced threat detection** and response
 
 ## Continuous Improvement
+
 - Regular red team exercises
 - Threat hunting operations
 - Security architecture reviews

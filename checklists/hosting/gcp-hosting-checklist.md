@@ -5,6 +5,7 @@
 This checklist maps Essential Eight controls to Google Cloud services and best practices.
 
 ### 1. Application Control
+
 - [ ] **ML1: Basic Application Control**
   - [ ] Use Binary Authorization for container deployments
   - [ ] Implement Cloud Asset Inventory
@@ -22,6 +23,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Enable advanced threat detection
 
 ### 2. Patch Applications
+
 - [ ] **ML1: Regular Patching**
   - [ ] Configure OS Patch Management
   - [ ] Set up patch deployment schedules
@@ -38,6 +40,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Enable automatic security updates
 
 ### 3. Configure Microsoft Office Macro Settings
+
 - [ ] **ML1: Macro Restrictions**
   - [ ] Configure Chrome Enterprise policies
   - [ ] Use Context-Aware Access for Google Workspace
@@ -52,6 +55,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Enable threat detection
 
 ### 4. User Application Hardening
+
 - [ ] **ML1: Basic Hardening**
   - [ ] Configure VPC firewall rules
   - [ ] Implement Cloud NAT
@@ -68,6 +72,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Enable Chronicle Security Operations
 
 ### 5. Restrict Administrative Privileges
+
 - [ ] **ML1: IAM Best Practices**
   - [ ] Enforce MFA for all admin accounts
   - [ ] Implement least privilege IAM policies
@@ -87,6 +92,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Implement approval workflows
 
 ### 6. Patch Operating Systems
+
 - [ ] **ML1: OS Patching**
   - [ ] Configure OS Patch Management service
   - [ ] Use Google-provided images
@@ -104,6 +110,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Use Anthos for hybrid deployments
 
 ### 7. Multi-factor Authentication
+
 - [ ] **ML1: Basic MFA**
   - [ ] Enable 2-Step Verification
   - [ ] Require MFA for Cloud Console
@@ -121,6 +128,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Implement phishing-resistant MFA
 
 ### 8. Regular Backups
+
 - [ ] **ML1: Basic Backups**
   - [ ] Enable Cloud Storage versioning
   - [ ] Configure persistent disk snapshots
@@ -140,6 +148,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 ## GCP-Specific Security Controls
 
 ### Organization & Project Security
+
 - [ ] **Organization Structure**
   - [ ] Implement resource hierarchy
   - [ ] Use separate projects for environments
@@ -155,6 +164,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Restrict external IPs
 
 ### Network Security
+
 - [ ] **VPC Security**
   - [ ] Use custom mode VPCs
   - [ ] Implement Shared VPC
@@ -177,6 +187,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Enable micro-segmentation
 
 ### Data Security
+
 - [ ] **Encryption**
   - [ ] Enable default encryption
   - [ ] Use Cloud KMS
@@ -199,6 +210,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Use Workload Identity
 
 ### Compute Security
+
 - [ ] **Compute Engine Security**
   - [ ] Use Shielded VMs
   - [ ] Enable OS Login
@@ -221,6 +233,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Enable VPC connectors
 
 ### Monitoring & Compliance
+
 - [ ] **Security Monitoring**
   - [ ] Enable Security Command Center
   - [ ] Configure Cloud IDS
@@ -243,6 +256,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
   - [ ] Document response procedures
 
 ### Identity & Access Management
+
 - [ ] **Cloud Identity**
   - [ ] Configure Cloud Identity
   - [ ] Implement groups and organizational units
@@ -267,6 +281,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 ## Implementation Roadmap
 
 ### Week 1-2: Foundation
+
 1. Set up Organization and projects
 2. Configure Cloud Identity
 3. Enable Security Command Center
@@ -274,6 +289,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 5. Configure MFA for all users
 
 ### Week 3-4: Network & Access
+
 1. Design VPC architecture
 2. Configure firewall rules
 3. Set up Cloud Armor
@@ -281,6 +297,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 5. Configure Private Google Access
 
 ### Week 5-6: Data & Compute
+
 1. Enable encryption everywhere
 2. Configure backup strategies
 3. Implement OS Patch Management
@@ -288,6 +305,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 5. Configure Cloud Armor and DDoS
 
 ### Week 7-8: Advanced Security
+
 1. Implement compliance frameworks
 2. Configure Chronicle or SIEM
 3. Set up automated remediation
@@ -295,6 +313,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 5. Document configurations
 
 ### Ongoing: Operations
+
 1. Regular security assessments
 2. Patch and update cycles
 3. Access reviews and audits
@@ -304,6 +323,7 @@ This checklist maps Essential Eight controls to Google Cloud services and best p
 ## gcloud CLI Scripts
 
 ### Enable Security Services
+
 ```bash
 # Enable Security Command Center
 gcloud scc sources create --display-name="Security Scanner"
@@ -316,6 +336,7 @@ gcloud resource-manager org-policies allow
 ```
 
 ### Security Audit
+
 ```bash
 # List users without MFA
 gcloud identity groups memberships list
@@ -331,6 +352,7 @@ gcloud iam service-accounts list
 ```
 
 ### Terraform Examples
+
 ```hcl
 # Enable APIs
 resource "google_project_service" "security" {
@@ -353,6 +375,7 @@ resource "google_organization_policy" "policy" {
 ## Compliance Frameworks
 
 ### Applicable Standards
+
 - [ ] Google Cloud Security Foundations Blueprint
 - [ ] CIS Google Cloud Platform Foundation Benchmark
 - [ ] PCI DSS on Google Cloud
@@ -365,6 +388,7 @@ resource "google_organization_policy" "policy" {
 ## Security Best Practices
 
 ### Network Architecture
+
 1. Hub-and-spoke VPC design
 2. Shared VPC for multi-project
 3. VPC Service Controls for data protection
@@ -372,6 +396,7 @@ resource "google_organization_policy" "policy" {
 5. Cloud Interconnect for hybrid
 
 ### Data Governance
+
 1. Data classification with DLP
 2. Encryption with CMEK/CSEK
 3. Data residency controls
@@ -379,6 +404,7 @@ resource "google_organization_policy" "policy" {
 5. VPC Service Controls perimeters
 
 ### Operational Excellence
+
 1. Infrastructure as Code (Terraform)
 2. Policy as Code
 3. Automated compliance scanning
@@ -404,6 +430,7 @@ resource "google_organization_policy" "policy" {
 ## Monitoring Dashboard Setup
 
 ### Key Metrics to Monitor
+
 - [ ] Failed authentication attempts
 - [ ] Privilege escalations
 - [ ] Network anomalies
@@ -414,6 +441,7 @@ resource "google_organization_policy" "policy" {
 - [ ] Compliance violations
 
 ### Alert Configuration
+
 - [ ] Security findings (Critical/High)
 - [ ] IAM changes
 - [ ] Firewall rule modifications

@@ -1,16 +1,19 @@
 # Backup and Recovery Solutions Guide
 
 ## Overview
+
 Regular backups are the last line of defense against ransomware and data loss. This guide covers implementation from ML1 to ML3.
 
 ## Maturity Level Requirements
 
 ### ML1 - Basic Backups
+
 - ✅ Daily backups of important data
 - ✅ Offline or segregated storage
 - ✅ Quarterly restoration testing
 
 ### ML2 - Enhanced Backups  
+
 - ✅ All ML1 requirements
 - ✅ Encrypted backups (at rest and transit)
 - ✅ MFA-protected backup accounts
@@ -18,6 +21,7 @@ Regular backups are the last line of defense against ransomware and data loss. T
 - ✅ Monthly automated testing
 
 ### ML3 - Advanced Backups
+
 - ✅ All ML2 requirements
 - ✅ Continuous data protection (CDP)
 - ✅ Near-zero RPO (< 15 minutes)
@@ -29,11 +33,13 @@ Regular backups are the last line of defense against ransomware and data loss. T
 ## Enterprise Backup Solutions
 
 ### Veeam Backup & Replication
+
 **Cost**: $$$ ($500-2000 per socket)
 **Complexity**: Medium
 **Best for**: VMware/Hyper-V environments
 
 #### PowerShell Configuration
+
 ```powershell
 # Configure Veeam backup job with immutability
 Add-PSSnapin VeeamPSSnapin
@@ -72,11 +78,13 @@ $copyJob = Add-VBRBackupCopyJob -Name "Offsite-Copy" `
 ---
 
 ### Commvault
+
 **Cost**: $$$$ (enterprise pricing)
 **Complexity**: High
 **Best for**: Large heterogeneous environments
 
 #### REST API Automation
+
 ```python
 import requests
 import json
@@ -129,11 +137,13 @@ class CommvaultBackup:
 ---
 
 ### Azure Backup
+
 **Cost**: $$ (pay per GB)
 **Complexity**: Low
 **Best for**: Azure/hybrid environments
 
 #### ARM Template
+
 ```json
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
@@ -200,11 +210,13 @@ class CommvaultBackup:
 ## Open Source Solutions
 
 ### Bacula
+
 **Cost**: Free (enterprise support available)
 **Complexity**: High
 **Best for**: Linux environments
 
 #### Configuration Script
+
 ```bash
 #!/bin/bash
 # Bacula configuration for ML2 compliance
@@ -284,11 +296,13 @@ chattr +i /mnt/backup-immutable/*
 ---
 
 ### Restic
+
 **Cost**: Free (open source)
 **Complexity**: Low
 **Best for**: Cloud storage backends
 
 #### Automated Backup Script
+
 ```bash
 #!/bin/bash
 # Restic backup with immutability for S3
@@ -350,6 +364,7 @@ done
 ## Ransomware Protection Strategies
 
 ### Air-Gapped Backup Implementation
+
 ```python
 #!/usr/bin/env python3
 import os
@@ -425,6 +440,7 @@ if __name__ == "__main__":
 ## Backup Testing Automation
 
 ### Automated Recovery Testing
+
 ```powershell
 # ML2/ML3 Automated backup testing script
 function Test-BackupRecovery {
@@ -519,6 +535,7 @@ Register-ScheduledTask -TaskName "MonthlyBackupTest" `
 ## 3-2-1 Backup Rule Implementation
 
 ### Configuration Example
+
 ```yaml
 # Docker Compose for 3-2-1 backup strategy
 version: '3.8'
@@ -577,6 +594,7 @@ secrets:
 ## Monitoring & Alerting
 
 ### Backup Monitoring Dashboard
+
 ```python
 from prometheus_client import Gauge, Counter, Histogram
 import time
@@ -609,6 +627,7 @@ def monitor_backup_job(job_name, backup_func):
 ---
 
 ## Resources
+
 - [Veeam Best Practices](https://bp.veeam.com/)
 - [Azure Backup Documentation](https://docs.microsoft.com/en-us/azure/backup/)
 - [Restic Documentation](https://restic.readthedocs.io/)

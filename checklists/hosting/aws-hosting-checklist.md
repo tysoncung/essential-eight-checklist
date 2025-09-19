@@ -5,6 +5,7 @@
 This checklist maps Essential Eight controls to AWS services and best practices.
 
 ### 1. Application Control
+
 - [ ] **ML1: Basic Application Control**
   - [ ] Use AWS Systems Manager to inventory applications
   - [ ] Implement AWS AppStream 2.0 for controlled desktop apps
@@ -22,6 +23,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Enable AWS Shield Advanced for DDoS protection
 
 ### 2. Patch Applications
+
 - [ ] **ML1: Regular Patching**
   - [ ] Enable AWS Systems Manager Patch Manager
   - [ ] Configure maintenance windows
@@ -38,6 +40,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Enable automatic security updates for managed services
 
 ### 3. Configure Microsoft Office Macro Settings
+
 - [ ] **ML1: Macro Restrictions**
   - [ ] Configure AppStream 2.0 application settings
   - [ ] Use Group Policy with AWS Directory Service
@@ -52,6 +55,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Enable threat detection in Amazon Macie
 
 ### 4. User Application Hardening
+
 - [ ] **ML1: Basic Hardening**
   - [ ] Configure security groups restrictively
   - [ ] Implement NACLs for network isolation
@@ -68,6 +72,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Enable AWS Security Hub for centralized security
 
 ### 5. Restrict Administrative Privileges
+
 - [ ] **ML1: IAM Best Practices**
   - [ ] Enforce MFA for all IAM users
   - [ ] Implement least privilege IAM policies
@@ -87,6 +92,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Implement break-glass procedures
 
 ### 6. Patch Operating Systems
+
 - [ ] **ML1: OS Patching**
   - [ ] Configure Systems Manager Patch Manager
   - [ ] Use AWS-provided AMIs with latest patches
@@ -104,6 +110,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Use AWS Fargate for serverless containers
 
 ### 7. Multi-factor Authentication
+
 - [ ] **ML1: Basic MFA**
   - [ ] Enable MFA for root account
   - [ ] Require MFA for IAM users
@@ -121,6 +128,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Implement continuous verification
 
 ### 8. Regular Backups
+
 - [ ] **ML1: Basic Backups**
   - [ ] Enable automated EBS snapshots
   - [ ] Configure RDS automated backups
@@ -140,6 +148,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 ## AWS-Specific Security Controls
 
 ### Account & Organization Security
+
 - [ ] **Account Structure**
   - [ ] Implement AWS Organizations
   - [ ] Use separate accounts for prod/dev/test
@@ -155,6 +164,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Require specific tags
 
 ### Network Security
+
 - [ ] **VPC Security**
   - [ ] Use private subnets for resources
   - [ ] Implement VPC peering securely
@@ -177,6 +187,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Implement NACLs for subnet protection
 
 ### Data Security
+
 - [ ] **Encryption**
   - [ ] Enable S3 default encryption
   - [ ] Use KMS for key management
@@ -199,6 +210,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Audit secret access
 
 ### Compute Security
+
 - [ ] **EC2 Security**
   - [ ] Use IMDSv2 exclusively
   - [ ] Configure EC2 Instance Connect
@@ -221,6 +233,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Enable X-Ray tracing
 
 ### Monitoring & Compliance
+
 - [ ] **Security Monitoring**
   - [ ] Enable AWS Security Hub
   - [ ] Configure GuardDuty
@@ -243,6 +256,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
   - [ ] Document runbooks
 
 ### Cost & Resource Optimization
+
 - [ ] **Cost Security**
   - [ ] Enable AWS Budgets alerts
   - [ ] Configure Cost Anomaly Detection
@@ -260,6 +274,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 ## Implementation Roadmap
 
 ### Week 1-2: Foundation
+
 1. Set up AWS Organizations and accounts
 2. Configure CloudTrail and Config
 3. Enable GuardDuty and Security Hub
@@ -267,6 +282,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 5. Configure MFA for all users
 
 ### Week 3-4: Network & Access
+
 1. Design and implement VPC architecture
 2. Configure security groups and NACLs
 3. Set up VPN or Direct Connect
@@ -274,6 +290,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 5. Configure Systems Manager
 
 ### Week 5-6: Data & Compute
+
 1. Enable encryption everywhere
 2. Configure backup strategies
 3. Implement patch management
@@ -281,6 +298,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 5. Configure WAF and Shield
 
 ### Week 7-8: Advanced Security
+
 1. Implement compliance frameworks
 2. Configure automated remediation
 3. Set up incident response procedures
@@ -288,6 +306,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 5. Document all configurations
 
 ### Ongoing: Operations
+
 1. Regular security reviews
 2. Patch and update cycles
 3. Access reviews and audits
@@ -297,6 +316,7 @@ This checklist maps Essential Eight controls to AWS services and best practices.
 ## Automation Scripts
 
 ### Enable Security Services
+
 ```bash
 # Enable GuardDuty
 aws guardduty create-detector --enable
@@ -310,6 +330,7 @@ aws configservice start-configuration-recorder
 ```
 
 ### Security Audit
+
 ```bash
 # Check for root account MFA
 aws iam get-account-summary
@@ -324,6 +345,7 @@ aws iam list-access-keys
 ## Compliance Frameworks
 
 ### Applicable Standards
+
 - [ ] AWS Well-Architected Framework
 - [ ] CIS AWS Foundations Benchmark
 - [ ] PCI DSS on AWS

@@ -5,6 +5,7 @@
 This checklist aligns on-premise hosting security with the Essential Eight Maturity Model.
 
 ### 1. Application Control
+
 - [ ] **ML1: Whitelisting**
   - [ ] Implement application whitelisting on all servers
   - [ ] Block execution from temporary folders
@@ -20,6 +21,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Enable exploit protection features
 
 ### 2. Patch Applications
+
 - [ ] **ML1: Monthly Patching**
   - [ ] Establish monthly patching schedule
   - [ ] Document all installed applications
@@ -35,6 +37,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Zero-day vulnerability response plan
 
 ### 3. Configure Microsoft Office Macro Settings
+
 - [ ] **ML1: Macro Restrictions**
   - [ ] Disable macros from the internet
   - [ ] Block macros in Office files from email
@@ -49,6 +52,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Monitor and alert on macro execution
 
 ### 4. User Application Hardening
+
 - [ ] **ML1: Basic Hardening**
   - [ ] Disable unnecessary browser plugins
   - [ ] Block ads and Java on the internet
@@ -63,6 +67,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Enable advanced exploit protections
 
 ### 5. Restrict Administrative Privileges
+
 - [ ] **ML1: Basic Restrictions**
   - [ ] Document all admin accounts
   - [ ] Separate admin and user accounts
@@ -78,6 +83,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Complete audit trail of admin actions
 
 ### 6. Patch Operating Systems
+
 - [ ] **ML1: Monthly OS Patching**
   - [ ] Monthly Windows/Linux updates
   - [ ] Firmware updates quarterly
@@ -92,6 +98,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Kernel-level protection updates
 
 ### 7. Multi-factor Authentication
+
 - [ ] **ML1: Critical System MFA**
   - [ ] MFA for all admin accounts
   - [ ] MFA for remote access (VPN, RDP)
@@ -106,6 +113,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Continuous authentication monitoring
 
 ### 8. Regular Backups
+
 - [ ] **ML1: Basic Backups**
   - [ ] Daily incremental backups
   - [ ] Weekly full backups
@@ -125,6 +133,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
 ## Physical Infrastructure Security
 
 ### Server Room/Data Center
+
 - [ ] **Physical Access Control**
   - [ ] Biometric access controls
   - [ ] Security cameras with 90-day retention
@@ -149,6 +158,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] TPM chip utilization
 
 ### Network Security
+
 - [ ] **Perimeter Security**
   - [ ] Enterprise firewall with IPS/IDS
   - [ ] DMZ for public-facing services
@@ -171,6 +181,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Log aggregation and analysis
 
 ### Storage Security
+
 - [ ] **Data Protection**
   - [ ] Encryption at rest (full disk)
   - [ ] Encryption in transit (TLS/SSL)
@@ -186,6 +197,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Performance monitoring
 
 ### Virtualization Security
+
 - [ ] **Hypervisor Security**
   - [ ] Hypervisor hardening
   - [ ] Regular hypervisor updates
@@ -201,6 +213,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Snapshot management
 
 ### Disaster Recovery
+
 - [ ] **Planning**
   - [ ] Documented DR plan
   - [ ] Recovery time objectives (RTO)
@@ -216,6 +229,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Vendor contact list
 
 ### Compliance & Governance
+
 - [ ] **Documentation**
   - [ ] Network diagrams
   - [ ] Asset inventory
@@ -231,6 +245,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
   - [ ] Risk assessments
 
 ### Operational Security
+
 - [ ] **Monitoring & Alerting**
   - [ ] 24/7 monitoring capability
   - [ ] Automated alerting system
@@ -248,6 +263,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
 ## Implementation Priority
 
 ### Phase 1: Critical (Immediate)
+
 1. Physical access control
 2. Admin privilege restrictions
 3. Backup implementation
@@ -255,6 +271,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
 5. Critical system patching
 
 ### Phase 2: High (30 days)
+
 1. Application control
 2. MFA implementation
 3. Network segmentation
@@ -262,6 +279,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
 5. Monitoring setup
 
 ### Phase 3: Medium (90 days)
+
 1. Full Essential Eight ML1
 2. DR plan implementation
 3. Vulnerability management
@@ -269,6 +287,7 @@ This checklist aligns on-premise hosting security with the Essential Eight Matur
 5. Advanced monitoring
 
 ### Phase 4: Ongoing
+
 1. Progress to ML2/ML3
 2. Continuous improvement
 3. Regular testing

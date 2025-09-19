@@ -5,6 +5,7 @@
 This checklist maps Essential Eight controls to Azure services and best practices.
 
 ### 1. Application Control
+
 - [ ] **ML1: Basic Application Control**
   - [ ] Use Azure Policy for application governance
   - [ ] Implement Adaptive Application Controls in Defender
@@ -22,6 +23,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Enable advanced threat protection
 
 ### 2. Patch Applications
+
 - [ ] **ML1: Regular Patching**
   - [ ] Configure Azure Update Management
   - [ ] Set up update schedules
@@ -38,6 +40,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Enable automatic platform updates
 
 ### 3. Configure Microsoft Office Macro Settings
+
 - [ ] **ML1: Macro Restrictions**
   - [ ] Configure Intune policies for Office
   - [ ] Use Conditional Access for Office 365
@@ -52,6 +55,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Enable Advanced Threat Analytics
 
 ### 4. User Application Hardening
+
 - [ ] **ML1: Basic Hardening**
   - [ ] Configure Network Security Groups (NSGs)
   - [ ] Implement Azure Firewall
@@ -68,6 +72,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Enable Microsoft Sentinel
 
 ### 5. Restrict Administrative Privileges
+
 - [ ] **ML1: Azure AD Best Practices**
   - [ ] Enforce MFA for all admin accounts
   - [ ] Implement Azure RBAC
@@ -87,6 +92,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Implement emergency access accounts
 
 ### 6. Patch Operating Systems
+
 - [ ] **ML1: OS Patching**
   - [ ] Configure Update Management
   - [ ] Use Azure-provided images
@@ -104,6 +110,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Use Azure Functions for serverless
 
 ### 7. Multi-factor Authentication
+
 - [ ] **ML1: Basic MFA**
   - [ ] Enable Azure AD MFA
   - [ ] Require MFA for administrators
@@ -121,6 +128,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Implement phishing-resistant MFA
 
 ### 8. Regular Backups
+
 - [ ] **ML1: Basic Backups**
   - [ ] Enable Azure Backup
   - [ ] Configure VM backup policies
@@ -140,6 +148,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 ## Azure-Specific Security Controls
 
 ### Tenant & Subscription Security
+
 - [ ] **Azure AD Tenant**
   - [ ] Configure tenant restrictions
   - [ ] Enable security defaults
@@ -155,6 +164,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Enable Azure Blueprints
 
 ### Network Security
+
 - [ ] **Virtual Network Security**
   - [ ] Implement hub-spoke topology
   - [ ] Configure VNet peering securely
@@ -177,6 +187,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Implement micro-segmentation
 
 ### Data Security
+
 - [ ] **Encryption**
   - [ ] Enable Storage Service Encryption
   - [ ] Use Azure Key Vault
@@ -199,6 +210,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Audit secret access
 
 ### Compute Security
+
 - [ ] **Virtual Machine Security**
   - [ ] Use Azure Security Center recommendations
   - [ ] Enable endpoint protection
@@ -221,6 +233,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Enable Application Insights
 
 ### Monitoring & Compliance
+
 - [ ] **Security Monitoring**
   - [ ] Enable Microsoft Defender for Cloud
   - [ ] Configure Microsoft Sentinel
@@ -243,6 +256,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
   - [ ] Document response procedures
 
 ### Identity & Access Management
+
 - [ ] **Azure AD Security**
   - [ ] Implement Identity Protection
   - [ ] Configure risk policies
@@ -267,6 +281,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 ## Implementation Roadmap
 
 ### Week 1-2: Foundation
+
 1. Set up Azure AD and subscriptions
 2. Configure Microsoft Defender for Cloud
 3. Enable Azure Policy and Blueprints
@@ -274,6 +289,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 5. Configure MFA for all users
 
 ### Week 3-4: Network & Access
+
 1. Design Virtual Network architecture
 2. Configure NSGs and ASGs
 3. Set up Azure Firewall
@@ -281,6 +297,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 5. Configure Private Endpoints
 
 ### Week 5-6: Data & Compute
+
 1. Enable encryption everywhere
 2. Configure Azure Backup
 3. Implement Update Management
@@ -288,6 +305,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 5. Configure WAF and DDoS protection
 
 ### Week 7-8: Advanced Security
+
 1. Implement compliance frameworks
 2. Configure Microsoft Sentinel
 3. Set up automated remediation
@@ -295,6 +313,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 5. Document configurations
 
 ### Ongoing: Operations
+
 1. Regular security assessments
 2. Update and patch cycles
 3. Access reviews and audits
@@ -304,6 +323,7 @@ This checklist maps Essential Eight controls to Azure services and best practice
 ## PowerShell Automation Scripts
 
 ### Enable Security Features
+
 ```powershell
 # Enable Microsoft Defender for Cloud
 Set-AzSecurityPricing -Name "VirtualMachines" -PricingTier "Standard"
@@ -316,6 +336,7 @@ New-AzAutomationSchedule -ResourceGroupName "RG" -AutomationAccountName "AA"
 ```
 
 ### Security Audit
+
 ```powershell
 # Check for users without MFA
 Get-MsolUser -All | where {$_.StrongAuthenticationMethods.Count -eq 0}
@@ -330,6 +351,7 @@ Get-AzPublicIpAddress | Select Name, IpAddress, ResourceGroupName
 ## Azure CLI Scripts
 
 ### Security Configuration
+
 ```bash
 # Enable Security Center Standard tier
 az security pricing create --name VirtualMachines --tier standard
@@ -344,6 +366,7 @@ az backup protection enable-for-vm --vault-name MyVault
 ## Compliance Frameworks
 
 ### Applicable Standards
+
 - [ ] Azure Security Benchmark
 - [ ] CIS Microsoft Azure Foundations Benchmark
 - [ ] Azure Security Center Regulatory Compliance

@@ -1,22 +1,26 @@
 # Multi-Factor Authentication (MFA) Implementation Guide
 
 ## Overview
+
 MFA is critical for protecting against credential-based attacks. This guide covers implementation across ML1-ML3 requirements.
 
 ## Maturity Level Requirements
 
 ### ML1 - Basic MFA
+
 - ✅ VPN access
 - ✅ Remote desktop access  
 - ✅ Cloud services with corporate data
 
 ### ML2 - Enhanced MFA
+
 - ✅ All ML1 requirements
 - ✅ All privileged accounts
 - ✅ Phishing-resistant methods (no SMS)
 - ✅ All remote access points
 
 ### ML3 - Advanced MFA
+
 - ✅ All ML2 requirements
 - ✅ All user accounts
 - ✅ Risk-based authentication
@@ -28,11 +32,13 @@ MFA is critical for protecting against credential-based attacks. This guide cove
 ## Cloud-Based MFA Solutions
 
 ### Microsoft Azure MFA / Entra ID
+
 **Cost**: $$ ($6/user/month for P1)
 **Complexity**: Medium
 **Best for**: Microsoft 365 environments
 
 #### Implementation
+
 ```powershell
 # Enable MFA for all users via Conditional Access
 Connect-MgGraph -Scopes "Policy.ReadWrite.ConditionalAccess"
@@ -63,6 +69,7 @@ New-MgIdentityConditionalAccessPolicy -BodyParameter $params
 ```
 
 #### Passwordless Configuration
+
 ```powershell
 # Enable FIDO2 security keys
 $methodId = "fido2"
@@ -79,11 +86,13 @@ Update-MgPolicyAuthenticationMethodPolicyAuthenticationMethodConfiguration -Auth
 ---
 
 ### Okta
+
 **Cost**: $$$ ($5-15/user/month)
 **Complexity**: Medium
 **Best for**: Multi-cloud environments
 
 #### API Configuration
+
 ```python
 import okta
 from okta.client import Client as OktaClient
@@ -119,11 +128,13 @@ client.create_policy(policy)
 ---
 
 ### Duo Security (Cisco)
+
 **Cost**: $$ ($3-9/user/month)
 **Complexity**: Low
 **Best for**: Hybrid environments
 
 #### Integration Script
+
 ```bash
 #!/bin/bash
 # Duo Unix/Linux PAM integration
@@ -156,11 +167,13 @@ echo "auth required pam_duo.so" >> /etc/pam.d/sshd
 ## On-Premise MFA Solutions
 
 ### FreeIPA with FreeOTP
+
 **Cost**: Free (open source)
 **Complexity**: High
 **Best for**: Linux environments
 
 #### Setup Script
+
 ```bash
 # Install FreeIPA with OTP support
 dnf install -y freeipa-server freeipa-server-dns
@@ -190,11 +203,13 @@ systemctl restart sssd
 ---
 
 ### privacyIDEA
+
 **Cost**: Free (open source, enterprise support available)
 **Complexity**: Medium
 **Best for**: Custom requirements
 
 #### Docker Deployment
+
 ```yaml
 version: '3.7'
 
@@ -233,11 +248,13 @@ volumes:
 ## Hardware Token Solutions
 
 ### YubiKey Implementation
+
 **Cost**: $$ ($45-70 per key)
 **Complexity**: Low
 **Best for**: High-security requirements
 
 #### Windows Configuration
+
 ```powershell
 # Configure YubiKey for Windows Hello for Business
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System" `
@@ -271,6 +288,7 @@ Invoke-RestMethod -Uri $uri -Method Patch -Body $body -Headers @{Authorization =
 ## Risk-Based Authentication (ML3)
 
 ### Adaptive Authentication Implementation
+
 ```python
 import hashlib
 import json
@@ -345,6 +363,7 @@ class RiskBasedAuth:
 ## MFA Bypass & Emergency Access
 
 ### Break-Glass Procedures
+
 ```powershell
 # Create emergency access accounts
 $emergencyUser = @{
@@ -388,6 +407,7 @@ $alert = @{
 ## MFA Reporting & Monitoring
 
 ### PowerShell MFA Coverage Report
+
 ```powershell
 # Generate MFA enrollment and usage report
 Connect-MgGraph -Scopes "UserAuthenticationMethod.Read.All", "AuditLog.Read.All"
@@ -430,14 +450,18 @@ $metrics | ConvertTo-Json | Out-File "MFA-Metrics.json"
 ## Common MFA Implementation Issues
 
 ### Issue: User Resistance
-**Solution**: 
+
+**Solution**:
+
 - Phased rollout with pilot groups
 - User training sessions
 - Self-service enrollment portal
 - Clear communication of benefits
 
 ### Issue: Account Lockouts
+
 **Solution**:
+
 ```powershell
 # Implement smart lockout policies
 $policy = @{
@@ -450,7 +474,9 @@ Update-MgDomain -DomainId "company.com" -PasswordPolicy $policy
 ```
 
 ### Issue: Legacy Application Support
+
 **Solution**:
+
 - App passwords for legacy apps (temporary)
 - Modern authentication migration plan
 - Application proxy with pre-authentication
@@ -460,6 +486,7 @@ Update-MgDomain -DomainId "company.com" -PasswordPolicy $policy
 ## Testing & Validation
 
 ### MFA Test Script
+
 ```bash
 #!/bin/bash
 # Test MFA implementation across services
@@ -487,6 +514,7 @@ done
 ---
 
 ## Resources
+
 - [NIST SP 800-63B - Authentication Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html)
 - [FIDO Alliance Specifications](https://fidoalliance.org/specifications/)
 - [Microsoft Entra ID MFA Documentation](https://docs.microsoft.com/en-us/azure/active-directory/authentication/)

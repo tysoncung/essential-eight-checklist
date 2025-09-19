@@ -41,23 +41,29 @@ The Essential Eight are baseline mitigation strategies recommended by the Austra
 ## Maturity Levels
 
 ### 🎯 Maturity Level 1 (ML1)
+
 **Objective**: Partially mitigate attempts by adversaries using commodity tradecraft
 
 ### 🎯 Maturity Level 2 (ML2)  
+
 **Objective**: Mostly mitigate the majority of cyber security incidents
 
 ### 🎯 Maturity Level 3 (ML3)
+
 **Objective**: Significantly harder for adversaries to compromise systems
 
 ## Implementation Checklists
 
 ### Quick Start
+
 1. [Complete the ML1 Checklist](checklists/ML1-CHECKLIST.md)
 2. [Progress to ML2 Checklist](checklists/ML2-CHECKLIST.md)
 3. [Achieve ML3 Checklist](checklists/ML3-CHECKLIST.md)
 
 ### 🆕 Infrastructure Hosting Checklists
+
 Platform-specific security implementation guides:
+
 - [🏢 On-Premise Hosting Security](checklists/hosting/on-premise-hosting-checklist.md)
 - [☁️ AWS Cloud Hosting Security](checklists/hosting/aws-hosting-checklist.md)
 - [☁️ Azure Cloud Hosting Security](checklists/hosting/azure-hosting-checklist.md)
@@ -65,6 +71,7 @@ Platform-specific security implementation guides:
 - [📚 Hosting Security Overview](checklists/hosting/README.md)
 
 ### Assessment Templates
+
 - [Self-Assessment Template](templates/self-assessment.xlsx)
 - [Gap Analysis Template](templates/gap-analysis.xlsx)
 - [Implementation Roadmap](templates/roadmap.xlsx)
@@ -72,19 +79,23 @@ Platform-specific security implementation guides:
 ## 🔧 Tools & Resources
 
 ### Application Control Tools
+
 - **Windows**: [AppLocker](tools/application-control.md#applocker), [Windows Defender Application Control](tools/application-control.md#wdac)
 - **Linux**: [SELinux](tools/application-control.md#selinux), [AppArmor](tools/application-control.md#apparmor)
 - **macOS**: [Gatekeeper](tools/application-control.md#gatekeeper), [Santa](tools/application-control.md#santa)
 
 ### Patch Management Solutions
+
 - **Enterprise**: [WSUS](tools/patch-management.md#wsus), [SCCM](tools/patch-management.md#sccm), [Intune](tools/patch-management.md#intune)
 - **Open Source**: [WSUS Offline](tools/patch-management.md#wsus-offline), [Ansible](tools/patch-management.md#ansible)
 
 ### Multi-factor Authentication
+
 - **Cloud**: [Azure MFA](tools/mfa.md#azure-mfa), [Okta](tools/mfa.md#okta), [Duo](tools/mfa.md#duo)
 - **On-Premise**: [FreeIPA](tools/mfa.md#freeipa), [privacyIDEA](tools/mfa.md#privacyidea)
 
 ### Backup Solutions
+
 - **Enterprise**: [Veeam](tools/backup.md#veeam), [Commvault](tools/backup.md#commvault)
 - **Open Source**: [Bacula](tools/backup.md#bacula), [Amanda](tools/backup.md#amanda)
 
@@ -106,16 +117,19 @@ Track your organization's progress across all Essential Eight strategies:
 ## 🚀 Getting Started
 
 ### For Small Organizations (< 100 users)
+
 1. Start with [ML1 Quick Wins](guides/small-org-ml1.md)
 2. Focus on high-impact, low-cost controls
 3. Use cloud-based solutions where possible
 
 ### For Medium Organizations (100-1000 users)
+
 1. Follow the [ML2 Implementation Plan](guides/medium-org-ml2.md)
 2. Implement centralized management tools
 3. Establish security operations procedures
 
 ### For Large Organizations (> 1000 users)
+
 1. Target [ML3 Compliance](guides/large-org-ml3.md)
 2. Deploy enterprise-grade solutions
 3. Implement continuous monitoring
@@ -123,6 +137,7 @@ Track your organization's progress across all Essential Eight strategies:
 ## 📈 Assessment Guide
 
 ### Self-Assessment Process
+
 1. **Current State Analysis** - Document existing controls
 2. **Gap Assessment** - Identify missing controls per maturity level
 3. **Risk Prioritization** - Focus on highest risk gaps
@@ -130,6 +145,7 @@ Track your organization's progress across all Essential Eight strategies:
 5. **Continuous Monitoring** - Regular reassessment
 
 ### Key Performance Indicators (KPIs)
+
 - Percentage of systems with application control
 - Mean time to patch critical vulnerabilities
 - MFA coverage across privileged accounts
@@ -138,11 +154,13 @@ Track your organization's progress across all Essential Eight strategies:
 ## 🔗 Additional Resources
 
 ### Official Documentation
+
 - [ACSC Essential Eight](https://www.cyber.gov.au/essential-eight)
 - [Essential Eight Maturity Model](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-maturity-model)
 - [Essential Eight Assessment Process Guide](https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight/essential-eight-assessment-process-guide)
 
 ### Community Resources
+
 - [Scripts and Automation](scripts/)
 - [Policy Templates](templates/policies/)
 - [Training Materials](training/)
