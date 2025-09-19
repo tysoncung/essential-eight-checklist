@@ -1,0 +1,42 @@
+name: Documentation Check
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check Markdown links
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+        use-verbose-mode: 'no'
+        config-file: '.markdown-link-check.json'
+        
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Lint Markdown files
+      uses: DavidAnson/markdownlint-cli2-action@v14
+      with:
+        globs: '**/*.md'
+        
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check spelling
+      uses: streetsidesoftware/cspell-action@v5
+      with:
+        files: '**/*.md'
+        config: '.cspell.json'
+        strict: false

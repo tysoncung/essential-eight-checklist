@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "ACSC",
+    "AppArmor",
+    "AppLocker",
+    "BYOD",
+    "Gatekeeper",
+    "Intune",
+    "MFA",
+    "SCCM",
+    "SELinux",
+    "WDAC",
+    "WSUS",
+    "ansible",
+    "maturitylevel",
+    "multifactor",
+    "okta",
+    "privacyIDEA",
+    "roadmap",
+    "tysoncung"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    ".git/**",
+    "*.log",
+    "*.lock"
+  ]
+}
